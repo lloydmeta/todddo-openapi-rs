@@ -1,4 +1,4 @@
-## todddo-openapi-rs
+## todddo-openapi-rs [![Build Status](https://travis-ci.org/lloydmeta/todddo-openapi-rs.svg?branch=master)](https://travis-ci.org/lloydmeta/todddo-openapi-rs)
 
 This project explores using using Rust in a DDD-esque fashion (cleanly separated `domain` and `infra`), along with
 the current (as of writing) Rust web tools, such as `actix-web`, and generated-from-source OpenAPI spec.
