@@ -1,0 +1,30 @@
+[package]
+name = "api"
+version = "0.1.0"
+authors = ["lloydmeta <lloydmeta@gmail.com>"]
+edition = "2018"
+build = "build.rs"
+
+[build-dependencies]
+actix-web-static-files = "0.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+domain = {  path = "../domain", version = "0.1.0" }
+infra = {  path = "../infra", version = "0.1.0" }
+log = "0.4"
+
+failure = "0.1.5"
+actix-web = "1.0"
+actix-files = "0.1"
+actix-web-static-files = "0.2"
+paperclip = { rev = "04f033dc23a57e00d5702d2942957c28e7035056", git = "https://github.com/wafflespeanut/paperclip", features = ["actix"] }
+
+# futures 0.1 <-> 0.3 compat layer
+async-trait = "0.1.10"
+futures_01 = { package = "futures", version = "0.1.28", optional = false }
+futures-preview = { version = "0.3.0-alpha.18", features = ["compat"] }
+
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"

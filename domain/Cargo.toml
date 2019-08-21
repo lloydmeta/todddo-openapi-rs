@@ -1,0 +1,14 @@
+[package]
+name = "domain"
+version = "0.1.0"
+authors = ["lloydmeta <lloydmeta@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Allows us to declare traits with async methods
+async-trait = "0.1.10"
+
+[dev-dependencies]
+futures-preview = { version = "0.3.0-alpha.18", features = ["compat"] }

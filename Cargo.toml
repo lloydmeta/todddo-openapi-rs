@@ -1,0 +1,17 @@
+[package]
+name = "todddo-openapi-rs"
+version = "0.1.0"
+authors = ["lloydmeta <lloydmeta@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+api = {  path = "api", version = "0.1.0" }
+env_logger = "0.6"
+
+[workspace]
+members = [
+    "api",
+    "domain",
+    "infra"
+]

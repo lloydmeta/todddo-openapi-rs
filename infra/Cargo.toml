@@ -1,0 +1,20 @@
+[package]
+name = "infra"
+version = "0.1.0"
+authors = ["lloydmeta <lloydmeta@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+domain = { path = "../domain", version = "0.1.0"}
+
+# Allows us to declare traits with async methods
+async-trait = "0.1.10"
+
+# futures 0.1-based async locks
+futures-locks = "0.3.3"
+
+# futures 0.1 <-> 0.3 compat layer
+futures01 = { package = "futures", version = "0.1", optional = true }
+futures-preview = { version = "0.3.0-alpha.18", features = ["compat"] }
