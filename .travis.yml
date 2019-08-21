@@ -17,8 +17,7 @@ addons:
       - libiberty-dev
 
 env:
-  - WORKSPACE_MEMBERS='api domain infra'
-  - RUSTFLAGS='-C link-dead-code'
+  - WORKSPACE_MEMBERS='api domain infra' RUSTFLAGS='-C link-dead-code'
 
 rust:
   - stable
