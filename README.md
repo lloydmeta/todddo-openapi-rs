@@ -25,5 +25,10 @@ This project requires nightly, so you'll need to `rustup toolchain install night
 cargo +nightly run
 ``` 
 
+After that, go to [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html) to play around
+with the built-in Swagger spec + UI.
+
+![Swagger](swagger.png)
+
 If, for some reason, nightly is borked, `nightly-2019-08-20-x86_64-apple-darwin` has been known to work; just install
 the right toolchain (`nightly-2019-08-20-${your-architecture}`) and run with that instead.
