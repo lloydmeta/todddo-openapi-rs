@@ -13,7 +13,8 @@ In specific:
 - Using [`future_locks`](https://docs.rs/futures-locks/0.3.3/futures_locks/) for async mutexes
 - Compiling static assets into the binary.
 - DDD-esque project structuring using workspaces to keep dependencies pure
-- Postponing of concrete types for interfaces (`trait`s) to maximise testability  
+- Postponing of concrete types for interfaces (`trait`s) to maximise testability
+- Enabling code coverage in Rust w/ workspaces (credit to Ana Gelez's [article](https://blog.funkwhale.audio/~/Rust@baptiste.gelez.xyz/rust-nightly-travis-ci-and-code-coverage)) 
 
 This is spiritually the sister project to [the Go version](https://github.com/lloydmeta/todddo-openapi).
 
