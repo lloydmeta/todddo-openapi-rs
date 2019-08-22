@@ -39,7 +39,7 @@ impl<A: TodoRepo + Sync> TodoService for TodoServiceImpl<A> {
     }
 
     async fn get(&self, todo_id: &TodoId) -> Result<Todo, TodoServiceLookupErr> {
-        self.todo_repo.get(todo_id).await.map_err(|e| e.into())
+        Ok(self.todo_repo.get(todo_id).await?)
     }
 
     async fn list(&self) -> Vec<Todo> {
@@ -47,12 +47,12 @@ impl<A: TodoRepo + Sync> TodoService for TodoServiceImpl<A> {
     }
 
     async fn delete(&self, todo_id: &TodoId) -> Result<(), TodoServiceLookupErr> {
-        self.todo_repo.delete(todo_id).await.map_err(|e| e.into())
+        Ok(self.todo_repo.delete(todo_id).await?)
     }
 
     async fn update(&self, todo: &Todo) -> Result<(), TodoServiceUpdateErr> {
         Self::validate_task(&todo.task)?;
-        self.todo_repo.update(todo).await.map_err(|e| e.into())
+        Ok(self.todo_repo.update(todo).await?)
     }
 }
 
